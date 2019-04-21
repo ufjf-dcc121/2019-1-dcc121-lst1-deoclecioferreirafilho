@@ -6,10 +6,17 @@
 </head>
 <body>
     
-<div id=interativo>“Clique-me!”</div>
+<div id=interativo>Clique-me!</div>
 
 <script>
-    
+    var einterativo = document.getElementById("interativo");  
+
+    einterativo.addEventListener("click", aValor )
+
+    function aValor()
+    {
+        einterativo.textContent="Funcionou!";
+    }
 
 
 </script>
