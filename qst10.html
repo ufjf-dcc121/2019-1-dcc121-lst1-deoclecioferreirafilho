@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>qst10</title>
-</head>
-<body>
-    <p id="n">nome</p>
-    <p id="s">sobrenome</p>
-    <h1 id="nc">nomescompleto</h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>qst10</title>
+    </head>
+    <body>
+        <p id="nome">Maria</p>
+        <p id="sobrenome">Aparecida</p>
+        <h1 id="nomecompleto"></h1>
+        <script>
+            var enome = document.getElementById("nome");
+            var esobrenome = document.getElementById("sobrenome");
 
-    <scrip>
+            var n = enome.textContent;
+            var s = esobrenome.textContent;
+            
+            nomecompleto.textContent = "Bem vindo "+n+" "+s+"!";
+            
 
-
+        </script>
         
-    </scrip>
-
-
-       
-</body>
+    </body>
 </html>
