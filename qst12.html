@@ -12,7 +12,21 @@
     <div id=soma></div>
 
     <script>
-    
+    var ex = document.getElementById("x");
+    var ey = document.getElementById("y");
+    var eproduto = document.getElementById("produto");
+    var esoma = document.getElementById("soma");
+
+    var ax = ex.textContent;
+    var ay = ey.textContent;
+    var p = ax * ay;
+
+    var axs = Number(ex.textContent);
+    var ays = Number(ey.textContent);
+    var s = axs + ays;
+
+    eproduto.textContent = "O produto de "+ax+ " e " +ay+ " é "+p+"!"
+    esoma.textContent = "A soma de "+axs+ " e " +ays+ " é "+s+"!"
     
     </script>
     
