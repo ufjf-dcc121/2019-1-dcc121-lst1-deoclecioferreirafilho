@@ -21,9 +21,25 @@
 
         eValorx.isContentEditable = true;
         eValory.isContentEditable = true;
-    </script>
 
-    
+        eBotao.addEventListener("click", alteraValor);
+        
+        var ax = eValorx.textContent;
+        var ay = eValory.textContent;
+        var p = ax * ay;
+
+        var axs = Number(eValorx.textContent);
+        var ays = Number(eValory.textContent);
+        var s = axs + ays;
+
+        function alteraValor()
+        {
+            eProduto.textContent = "O produto de "+ax+ " e " +ay+ " é "+p+"!"
+            eSoma.textContent = "A soma de "+axs+ " e " +ays+ " é "+s+"!"
+             
+        }
+
+    </script>
 
 </body>
 </html>
