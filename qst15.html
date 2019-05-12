@@ -7,19 +7,36 @@
 <body>
     <main>
         <h1>Resultado da Avaliação</h1>
-        <P>Olá <span id="nome">Fulano</span>, você está matriculado há <span id="ano" >2</span> anos no curso de Confeitaria e 
-        as notas das suas disciplinas são: <span id="confeitaria" >70</span> em Confeitaria Básica; <span id="cobertura" >80</span> em Coberturas 
-        e <span id="bbolos" >60</span> em Broas e Bolos.</P>
+        <P>Olá <span id="enome">Fulano</span>, você está matriculado há <span id="eano" >2</span> anos no curso de Confeitaria e 
+        as notas das suas disciplinas são: <span id="econfeitaria" >70</span> em Confeitaria Básica; <span id="ecobertura" >80</span> em Coberturas 
+        e <span id="ebolos" >60</span> em Broas e Bolos.</P>
 
         <p id="resultado" ></p>
         <button id="avaliar">Avaliar</button>
         <button id="limpar">Limpar</button>
         <p id="melhorias"></p>
-        
-
-
-        
+                
     </main>
+    <script>
+    var nome = document.getElementById("enome");
+    var anos = document.getElementById("eano");
+    var confeitaria = document.getElementById("econfeitaria");
+    var coberturas = document.getElementById("ecobertura");
+    var bolos = document.getElementById("ebolos");
+    var botaoAvaliar = document.getElementById("avaliar");
+    var botaoLimpar = document.getElementById("limpar");
+    var resultado = document.getElementById("resultado");
+    var melhorias = document.getElementById("");
+    var media = document.getElementById("");
+
+    nome.contentEditable = true;
+    anos.contentEditable = true;
+    confeitaria.contentEditable = true;
+    coberturas.contentEditable = true;
+    bolos.contentEditable = true;    
+
+    
+    </script>
 
 </body>
 </html>
