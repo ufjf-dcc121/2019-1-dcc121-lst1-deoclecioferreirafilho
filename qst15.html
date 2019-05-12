@@ -26,14 +26,23 @@
     var botaoAvaliar = document.getElementById("avaliar");
     var botaoLimpar = document.getElementById("limpar");
     var resultado = document.getElementById("resultado");
-    var melhorias = document.getElementById("");
-    var media = document.getElementById("");
+    var melhorias = document.getElementById("emelhorias");
+    var media = document.getElementById("emedia");
 
     nome.contentEditable = true;
     anos.contentEditable = true;
     confeitaria.contentEditable = true;
     coberturas.contentEditable = true;
     bolos.contentEditable = true;    
+
+    botaoAvaliar = addEventListener("click", limparClick);
+    botaoLimpar = addEventListener("click", avaliarClick);
+
+    function limparClick()
+    {
+        resultado.textContent = "";
+        melhorias.textContent = "";
+    }
 
     
     </script>
