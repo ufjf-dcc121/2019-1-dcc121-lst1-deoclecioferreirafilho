@@ -51,10 +51,38 @@
             var b = Number(coberturas.textContent);
             var c = Number(bolos.textContent);
             var m = Number(a+b+c)/3
+
             if (m>=70)
                 resultado.textContent = "Parabéns "+ n +"! Você está aprovado com média 70!";
             else
                 resultado.textContent = "Você está reprovaprovado com média 50!";
+
+            var x, y, z;
+            
+            if(a<60 || b<60 || c<60)
+            {
+                if (a<60)
+                    x = " Confeitaria";
+                else x = "";
+
+                if (b<60 && a<60 && c>=60)
+                    y = " e Cobertura";
+                    else if (b<60 && a<60 && c<60)
+                        y = ", Cobertura";
+                        else if (b<60)
+                            y = " Cobertura";
+                            else y = "";
+
+                if (c<60 && (a<60 || b<60))
+                    z = " e Broa e Bolos";
+                else if (c<60)
+                        z = " Broa e Bolos";
+                        else z = "";
+
+                melhorias.textContent = n + ", considere estudar mais"+x+y+z+ "!";
+            }else 
+            melhorias.textContent ="";
+
         }
     
     </script>
