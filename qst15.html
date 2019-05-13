@@ -8,42 +8,54 @@
     <main>
         <h1>Resultado da Avaliação</h1>
         <P>Olá <span id="enome">Fulano</span>, você está matriculado há <span id="eano" >2</span> anos no curso de Confeitaria e 
-        as notas das suas disciplinas são: <span id="econfeitaria" >70</span> em Confeitaria Básica; <span id="ecobertura" >80</span> em Coberturas 
-        e <span id="ebolos" >60</span> em Broas e Bolos.</P>
+        as notas das suas disciplinas são: <span id="nconfeitaria" >70</span> em Confeitaria Básica; <span id="ncobertura" >80</span> em Coberturas 
+        e <span id="nbolos" >60</span> em Broas e Bolos.</P>
 
-        <p id="resultado" ></p>
+        <p id="eresultado" ></p>
         <button id="avaliar">Avaliar</button>
         <button id="limpar">Limpar</button>
-        <p id="melhorias"></p>
+        <p id="emelhorias"></p>
                 
     </main>
     <script>
-    var nome = document.getElementById("enome");
-    var anos = document.getElementById("eano");
-    var confeitaria = document.getElementById("econfeitaria");
-    var coberturas = document.getElementById("ecobertura");
-    var bolos = document.getElementById("ebolos");
-    var botaoAvaliar = document.getElementById("avaliar");
-    var botaoLimpar = document.getElementById("limpar");
-    var resultado = document.getElementById("resultado");
-    var melhorias = document.getElementById("emelhorias");
-    var media = document.getElementById("emedia");
+        var nome = document.getElementById("enome");
+        var anos = document.getElementById("eano");
+        var confeitaria = document.getElementById("nconfeitaria");
+        var coberturas = document.getElementById("ncobertura");
+        var bolos = document.getElementById("nbolos");
+        var botaoAvaliar = document.getElementById("avaliar");
+        var botaoLimpar = document.getElementById("limpar");
+        var resultado = document.getElementById("eresultado");
+        var melhorias = document.getElementById("emelhorias");
+        var media = document.getElementById("emedia");
 
-    nome.contentEditable = true;
-    anos.contentEditable = true;
-    confeitaria.contentEditable = true;
-    coberturas.contentEditable = true;
-    bolos.contentEditable = true;    
+        nome.contentEditable = true;
+        anos.contentEditable = true;
+        confeitaria.contentEditable = true;
+        coberturas.contentEditable = true;
+        bolos.contentEditable = true;    
 
-    botaoAvaliar = addEventListener("click", limparClick);
-    botaoLimpar = addEventListener("click", avaliarClick);
+        botaoLimpar.addEventListener("click", limparClick);
+        botaoAvaliar.addEventListener("click", avaliarClick);
 
-    function limparClick()
-    {
-        resultado.textContent = "";
-        melhorias.textContent = "";
-    }
+        function limparClick()
+        {
+            resultado.textContent = " ";
+            melhorias.textContent = " ";
+        }
 
+        function avaliarClick()
+        {
+            var n = nome.textContent;
+            var a = Number(confeitaria.textContent);
+            var b = Number(coberturas.textContent);
+            var c = Number(bolos.textContent);
+            var m = Number(a+b+c)/3
+            if (m>=70)
+                resultado.textContent = "Parabéns "+ n +"! Você está aprovado com média 70!";
+            else
+                resultado.textContent = "Você está reprovaprovado com média 50!";
+        }
     
     </script>
 
