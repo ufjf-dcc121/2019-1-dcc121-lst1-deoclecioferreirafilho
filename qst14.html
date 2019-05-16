@@ -24,19 +24,16 @@
 
         eBotao.addEventListener("click", alteraValor);
         
-        var ax = eValorx.textContent;
-        var ay = eValory.textContent;
-        var p = ax * ay;
-
-        var axs = Number(eValorx.textContent);
-        var ays = Number(eValory.textContent);
-        var s = axs + ays;
+        
 
         function alteraValor()
         {
-            eProduto.textContent = "O produto de "+ax+ " e " +ay+ " é "+p+"!"
-            eSoma.textContent = "A soma de "+axs+ " e " +ays+ " é "+s+"!"
-             
+             var ax = Number(eValorx.textContent);
+             var ay = Number(eValory.textContent);
+             var p = ax * ay;
+             var s = ax + ay;
+             eProduto.textContent = "O produto de "+ax+ " e " +ay+ " = "+p+"!"
+             eSoma.textContent = "A soma de "+ax+ " e " +ay+ " = "+s+"!"
         }
 
     </script>
